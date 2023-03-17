@@ -1,0 +1,27 @@
+/* underconstruction content */
+.UnderConstruction {
+	background-color: theme('colors.purple.700');
+	background-image: url('/images/bg-square.png');
+	background-position: center center;
+	background-size: 100% auto;
+	min-height: 600px;
+}
+
+.Logo {
+	max-height: 60vh;
+}
+
+/* coming soon marquee */
+.ComingSoonTop {
+	top: 20px;
+}
+
+.ComingSoonBottom {
+	bottom: 20px;
+}
+
+@media (orientation: portrait) {
+	.UnderConstruction {
+		background-size: auto 100%;
+	}
+}

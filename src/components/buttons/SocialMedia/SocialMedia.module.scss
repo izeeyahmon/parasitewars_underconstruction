@@ -1,0 +1,29 @@
+.SocialMedia {}
+
+.PurpleButton:before,
+.BlueButton:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	z-index: 0;
+	transition: width 0.3s;
+}
+.PurpleButton:before {
+	background-color: theme('colors.purple.300');
+}
+.BlueButton:before {
+	background: linear-gradient(180deg, #4F5DFA 0%, #7681FF 100%);
+	border: 1px solid #7A86FF;
+}
+
+.Link:not(.Disabled):hover {
+	.PurpleButton:before {
+		width: 7.4rem;
+	}
+
+	.BlueButton:before {
+		width: 7.6rem;
+	}
+}
