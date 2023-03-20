@@ -1,5 +1,6 @@
 .SocialMedia {}
 
+/*
 .PurpleButton:before,
 .BlueButton:before {
 	content: '';
@@ -16,14 +17,59 @@
 .BlueButton:before {
 	background: linear-gradient(180deg, #4F5DFA 0%, #7681FF 100%);
 	border: 1px solid #7A86FF;
-}
+}*/
 
-.Link:not(.Disabled):hover {
+/*.Link:not(.Disabled):hover {
 	.PurpleButton:before {
 		width: 7.4rem;
 	}
 
 	.BlueButton:before {
 		width: 7.6rem;
+	}
+}*/
+
+/*.Button.blue {
+	background: theme('colors.blue.300');
+}
+.Button {
+	transition: background 0.3s;
+
+	.Link:not(.Disabled):hover & {
+		background: theme('colors.blue.300');
+	}
+}*/
+/*.Link:not(.Disabled):hover {
+	.BgColor {
+		background: theme('colors.blue.300');
+	}
+}*/
+
+.BgColor {
+	transition: background 0.3s;
+	background: theme('colors.purple.400');
+
+	.Button:not(.Disabled):hover & {
+		background: theme('colors.blue.400');
+	}
+
+	.Buttontwitter:not(.Disabled):hover & {
+		background: theme('colors.blue.300');
+	}
+}
+
+.IconColor {
+	margin-top: -1px;
+	transition: background 0.3s, border 0.1s;
+	background: theme('colors.purple.300');
+	border: 1px solid theme('colors.purple.300');
+
+	.Button:not(.Disabled):hover & {
+		background: linear-gradient(180deg, #4F5DFA 0%, #7681FF 100%);
+		border: 1px solid #7A86FF;
+	}
+	.Buttontwitter:not(.Disabled):hover & {
+		background: linear-gradient(180deg, #33A7F8 0%, #6CC3FF 100%);
+		border: 1px solid #7BC9FF;
 	}
 }
