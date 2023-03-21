@@ -6,16 +6,15 @@ import styles from './SocialMedia.module.scss';
 interface SocialMediaProps {
   href?: string
   position?: string
-  bgColor?: string
+  type?: string
   text?: string
   icon?: any
   disabled?: boolean
 }
 
 const SocialMedia: FC<SocialMediaProps> = (props) => {
-  const background = props.bgColor == 'blue' ? 'bg-blue-400' : 'bg-purple-400';
-  const buttonIcon = props.bgColor == 'blue' ? styles.BlueButton : styles.PurpleButton;
-  const disabled = props.disabled ? `${styles.Disabled} cursor-not-allowed opacity-50` : '';
+  const button = props.type == 'twitter' ? styles.Buttontwitter : styles.Button;
+  const disabled = props.disabled ? `${styles.Disabled} cursor-not-allowed opacity-25` : '';
 
   return (
     <Link 
@@ -25,9 +24,9 @@ const SocialMedia: FC<SocialMediaProps> = (props) => {
         return null; 
       }} 
       onDragStart={(e)=>e.preventDefault()} 
-      className={`${styles.Link} ${disabled}`}>
+      className={`${styles.Link} ${disabled} ${button}`}>
 
-      <div className={`${background} rounded-full p-1 mx-2`}>
+      <div className={`${styles.BgColor} rounded-full p-1 mx-2 group`}>
         
         {/* text (right) */}
         { props.position == 'right' ? 
@@ -37,13 +36,13 @@ const SocialMedia: FC<SocialMediaProps> = (props) => {
         
         {/* icon */}
         <div className="inline-block h-10">
-          <div className={`${buttonIcon} relative rounded-full w-10 h-full flex`}>
+          <div className={`${styles.IconColor} relative rounded-full w-10 h-full flex`}>
             {props.icon}
           </div>
         </div>
         
         {/* text (left) */}
-        { props.position == 'left' ? 
+        { props.position != 'right' ? 
           <span className="relative z-10 font-campton text-white text-sm inline-block align-top pl-3 pr-5 h-full leading-10">{ props.text }</span>
           : null
         }  

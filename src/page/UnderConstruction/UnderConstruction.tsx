@@ -25,16 +25,14 @@ const UnderConstruction: FC<UnderConstructionProps> = () => (
         <div className="whitespace-nowrap flex justify-center h-12">
           <SocialMedia 
             href="https://twitter.com/ParasiteWars" 
-            position="left" 
-            bgColor="purple" 
+            type="twitter"
             text="Twitter"
             icon={<TwitterIcon width="20" className="m-auto z-10 fill-gray-300" />} />
           
           <SocialMedia 
             disabled={true}
+            position="right"
             href="" 
-            position="right" 
-            bgColor="blue" 
             text="Discord" 
             icon={<DiscordIcon width="30" className="m-auto z-10 fill-white" />} />  
         </div>

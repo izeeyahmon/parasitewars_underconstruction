@@ -20,24 +20,25 @@ module.exports = {
         },
       },
       fontFamily: {
-	    poppins: ['Poppins', 'sans-serif'],
-	    campton: ['Neue Campton Test', 'Poppins', 'sans-serif'],
-	  },
-	  colors: {
-	  	white: '#fff',
-	    gray: {
-        300: '#D4D0DF',
-        400: '#E5E5F3',
+  	    poppins: ['Poppins', 'sans-serif'],
+  	    campton: ['Neue Campton Test', 'Poppins', 'sans-serif'],
+  	  },
+  	  colors: {
+        white: '#fff',
+        gray: {
+          300: '#D4D0DF',
+          400: '#E5E5F3',
+        },
+        purple: {
+          300: '#281952',
+          400: '#1A0F38',
+          700: '#0E0720'
+        },
+        blue: {
+          300: '#1E9AF0',
+          400: '#404EED',
+        }
       },
-	    purple: {
-	    	300: '#281952',
-	    	400: '#1A0F38',
-	    	700: '#0E0720'
-	    },
-	    blue: {
-	    	400: '#404EED',
-	    }
-	  },
     },
   },
   plugins: [],
